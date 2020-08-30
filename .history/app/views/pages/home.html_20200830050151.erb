@@ -5,11 +5,11 @@
             <%= render 'messages/message', message: message %>
         <% end %>
     </div>
-    <%= form_with model: @message do |f| %>
+    <% form_with model: @message do |f| %>
         <div class="input-group mb-3" >
             <%= f.text_field :body, placeholder: "Say something...", class: "form-control" %>
             <div class="input-group-append">
-                <%= f.submit "Send", class: "btn btn-secondary" %>
+                <%= %>
             </div>
         </div>
     <% end %>

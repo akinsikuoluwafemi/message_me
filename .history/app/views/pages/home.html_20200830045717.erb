@@ -1,0 +1,9 @@
+<div>
+    <h1 style="text-align:center">Chatter</h1>
+    <div class="well" id="chatbox" style="height:250px; border: 1px solid #222222; overflow-y:scroll " >
+        <% @messages.each do |message| %>
+            <%= render 'messages/message', message: message %>
+        <% end %>
+    </div>
+    <% form_with model: @message do |f| %>
+</div>
