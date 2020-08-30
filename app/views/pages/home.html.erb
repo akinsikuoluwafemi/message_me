@@ -5,6 +5,7 @@
             <%= render 'messages/message', message: message %>
         <% end %>
     </div>
+    <% if current_user %>
     <%= form_with model: @message do |f| %>
         <div class="input-group mb-3" >
             <%= f.text_field :body, placeholder: "Say something...", class: "form-control" %>
@@ -13,4 +14,8 @@
             </div>
         </div>
     <% end %>
+    <%else%>
+    <p style="text-align:center">You need to be <%= link_to "Signed in", new_user_session_path %> in order to chat</p>
+    <%end%>
+
 </div>
